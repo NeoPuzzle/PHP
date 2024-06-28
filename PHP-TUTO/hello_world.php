@@ -195,4 +195,216 @@ echo substr($x, 6) ."\n";
 echo substr($x, -5, 3) ."\n";
 
 $x = "Hi, how are you?";
-echo substr($x, 5, -3);
+echo substr($x, 5, -3)."\n";
+
+echo "++++++++++++" ."\n";
+
+$x = 5985;
+var_dump(is_int($x));
+
+$x = 59.85;
+var_dump(is_int($x));
+
+$x = 10.365;
+var_dump(is_float($x));
+
+$x = 1.9e411;
+var_dump($x);
+
+$x = acos(8);
+var_dump($x);
+
+
+$x = 5985;
+var_dump(is_numeric($x));
+
+$x = "5985";
+var_dump(is_numeric($x));
+$x = "59.85" + 100;
+var_dump(is_numeric($x));
+
+$x = "Hello";
+var_dump(is_numeric($x));
+
+echo "++++++Numerical strings++++++" ."\n";
+
+$x = 5985;
+var_dump(is_numeric($x));
+
+$x = "5985";
+var_dump(is_numeric($x));
+$x = "59.85" + 100;
+var_dump(is_numeric($x));
+
+$x = "Hello";
+var_dump(is_numeric($x));
+
+echo "++++++Cast Integers++++++" ."\n";
+
+// Cast float to int
+$x = 23465.768;
+$int_cast = (int)$x;
+var_dump($int_cast);
+echo $int_cast;
+
+echo "<br>";
+
+// Cast string to int
+$x = "23465.768";
+$int_cast = (int)$x;
+var_dump($int_cast);
+echo $int_cast;
+
+echo "++++++Cast to string++++++" ."\n";
+
+
+$a = 5;       // Integer
+$b = 5.34;    // Float
+$c = "hello"; // String
+$d = true;    // Boolean
+$e = NULL;    // NULL
+
+$a = (string) $a;
+$b = (string) $b;
+$c = (string) $c;
+$d = (string) $d;
+$e = (string) $e;
+
+//To verify the type of any object in PHP, use the var_dump() function:
+var_dump($a);
+var_dump($b);
+var_dump($c);
+var_dump($d);
+var_dump($e);
+
+echo "++++++Cast to Integers++++++" ."\n";
+
+$a = 5;       // Integer
+$b = 5.34;    // Float
+$c = "25 kilometers"; // String
+$d = "kilometers 25"; // String
+$e = "hello"; // String
+$f = true;    // Boolean
+$g = NULL;    // NULL
+
+$a = (int) $a;
+$b = (int) $b;
+$c = (int) $c;
+$d = (int) $d;
+$e = (int) $e;
+$f = (int) $f;
+$g = (int) $g;
+
+echo "++++++Cast to Floats++++++" ."\n";
+
+$a = 5;       // Integer
+$b = 5.34;    // Float
+$c = "25 kilometers"; // String
+$d = "kilometers 25"; // String
+$e = "hello"; // String
+$f = true;    // Boolean
+$g = NULL;    // NULL
+
+$a = (float) $a;
+$b = (float) $b;
+$c = (float) $c;
+$d = (float) $d;
+$e = (float) $e;
+$f = (float) $f;
+$g = (float) $g;
+
+echo "++++++Cast to Boolean++++++" ."\n";
+
+$a = 5;       // Integer
+$b = 5.34;    // Float
+$c = 0;       // Integer
+$d = -1;      // Integer
+$e = 0.1;     // Float
+$f = "hello"; // String
+$g = "";      // String
+$h = true;    // Boolean
+$i = NULL;    // NULL
+
+$a = (bool) $a;
+$b = (bool) $b;
+$c = (bool) $c;
+$d = (bool) $d;
+$e = (bool) $e;
+$f = (bool) $f;
+$g = (bool) $g;
+$h = (bool) $h;
+$i = (bool) $i;
+
+echo "++++++Cast to Array++++++" ."\n";
+
+$a = 5;       // Integer
+$b = 5.34;    // Float
+$c = "hello"; // String
+$d = true;    // Boolean
+$e = NULL;    // NULL
+
+$a = (array) $a;
+$b = (array) $b;
+$c = (array) $c;
+$d = (array) $d;
+$e = (array) $e;
+
+echo "++++++Converting Objects into Arrays:++++++" ."\n";
+
+
+class CarCast {
+    public $color;
+    public $model;
+    public function __construct($color, $model) {
+        $this->color = $color;
+        $this->model = $model;
+    }
+
+    public function message() {
+        return "My car is a " . $this->color . " " .$this->model . "!";
+    }
+}
+
+$myCarCast = new CarCast("red", "Volvo");
+
+$myCarCast = (array) $myCarCast;
+var_dump($myCarCast);
+
+
+
+$a = 5;       // Integer
+$b = 5.34;    // Float
+$c = "hello"; // String
+$d = true;    // Boolean
+$e = NULL;    // NULL
+
+$a = (object) $a;
+$b = (object) $b;
+$c = (object) $c;
+$d = (object) $d;
+$e = (object) $e;
+
+
+$a = array("Volvo", "BMW", "Toyota"); // indexed array
+$b = array("Peter"=>"35", "Ben"=>"37", "Joe"=>"43"); // associative array
+
+$a = (object) $a;
+$b = (object) $b;
+
+echo "+++++Math+++++++" ."\n";
+
+// echo(pi());
+
+echo(min(0, 150, 30, 20, -8, -200))."\n";
+echo(max(0, 150, 30, 20, -8, -200))."\n";
+
+echo(abs(-6.7)) ."\n";
+
+echo(sqrt(64)) ."\n";
+
+echo(round(0.60)) ."\n";
+echo(round(0.49)) ."\n";
+
+echo(rand())."\n";
+
+echo(rand(10, 100))."\n";

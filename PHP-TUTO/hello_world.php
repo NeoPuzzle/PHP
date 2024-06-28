@@ -408,3 +408,38 @@ echo(round(0.49)) ."\n";
 echo(rand())."\n";
 
 echo(rand(10, 100))."\n";
+
+
+echo "+++++Constans+++++++" ."\n";
+
+define("GREETING", "Welcome to W3Schools.com!");
+echo GREETING;
+
+// define("GREETING", "Welcome to W3Schools.com!", true);
+// echo greeting;
+
+const MYCAR = "Volvo";
+echo MYCAR;
+
+echo "++++++++++++" ."\n";
+
+
+
+define("cars", [
+    "Alfa Romeo",
+    "BMW",
+    "Toyota"
+  ]);
+  echo cars[0];
+
+
+  echo "++++++++++++" ."\n";
+
+
+  define("GREETINGG", "Welcome to W3Schools.com!@#$%");
+
+function myTestt() {
+  echo GREETINGG;
+}
+
+myTestt();

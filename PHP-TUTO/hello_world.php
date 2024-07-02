@@ -881,7 +881,37 @@ var_dump($car);
 foreach ($car as $x => $y) {
     echo "$x: $y <br>";
   }
-  echo " **" ."\n";
+  echo " ******Create Arrays" ."\n";
+  $cars = array("Volvo", "BMW", "Toyota");
+  var_dump($cars);
+  $cars = ["Volvo", "BMW", "Toyota"];
+  $cars = [
+    "Volvo",
+    "BMW",
+    "Toyota"
+  ];
+  $cars = [
+    0 => "Volvo",
+    1 => "BMW",
+    2 =>"Toyota"
+  ];
+  var_dump($cars);
+  $cars = [];
+$cars[0] = "Volvo";
+$cars[1] = "BMW";
+$cars[2] = "Toyota";
+$myCar = [];
+$myCar["brand"] = "Ford";
+$myCar["model"] = "Mustang";
+$myCar["year"] = 1964;
+foreach($myCar as $x=>$y){
+    echo "$x:  $y ";
+}
+$myArr = [];
+$myArr[0] = "apples";
+$myArr[1] = "bananas";
+$myArr["fruit"] = "cherries";
+var_dump($myArr);
   echo " **" ."\n";
   echo " **" ."\n";
   echo " **" ."\n";

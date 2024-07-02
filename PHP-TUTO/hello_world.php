@@ -912,7 +912,38 @@ $myArr[0] = "apples";
 $myArr[1] = "bananas";
 $myArr["fruit"] = "cherries";
 var_dump($myArr);
-  echo " **" ."\n";
+  echo " ******Access Arrays*********" ."\n";
+  $cars = array("Volvo", "BMW", "Toyota");
+echo $cars[2];
+$cars = array("brand" => "Ford", "model" => "Mustang", "year" => 1964);
+echo $cars["year"];
+echo $cars["model"];
+echo $cars['model'] ."\n";
+$myFunction = function() {
+    echo "I come from a function";
+};
+
+$myArri = array("volvo", 15, $myFunction);
+$myArri[2]();
+
+$myFunctionn = function() {
+    echo "I come from a function";
+};
+  
+  $myArr = array("car" => "Volvo", "age" => 15, "message" => $myFunctionn);
+  
+  $myArr["message"]();
+
+  $car = array("brand"=>"Ford", "model"=>"Mustang", "year"=>1964);
+
+foreach ($car as $x => $y) {
+  echo "$x: $y <br>";
+}
+
+$cars = array("Volvo", "BMW", "Toyota");
+foreach ($cars as $x) {
+  echo "$x <br>";
+}
   echo " **" ."\n";
   echo " **" ."\n";
   echo " **" ."\n";

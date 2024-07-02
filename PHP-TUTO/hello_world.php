@@ -872,7 +872,15 @@ array_push($cars, "Mercedez");
 var_dump($cars);
 
 // $myArr = array("Volvo", 15, ["apples", "bananas"], myFunction);
-  echo " **" ."\n";
+  echo " *******Associative Arrays" ."\n";
+  $car = array("brand"=>"Ford", "model"=>"Mustang", "year"=>1964);
+var_dump($car);
+echo $car["model"];
+$car["year"] = 2024;
+var_dump($car);
+foreach ($car as $x => $y) {
+    echo "$x: $y <br>";
+  }
   echo " **" ."\n";
   echo " **" ."\n";
   echo " **" ."\n";

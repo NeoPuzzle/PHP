@@ -849,7 +849,14 @@ echo addNumbers(1.2, 5.2);
     return (int)($a + $b);
   }
   echo addNumberss(1.2, 5.2);
-  echo " **" ."\n";
+  echo " ****PHP ARRAYS*****" ."\n";
+
+  $cars = array("Volvo", "BMW", "Toyota");
+  
+  var_dump($cars);
+  echo count($cars);
+
+// $myArr = array("Volvo", 15, ["apples", "bananas"], myFunction);
   echo " **" ."\n";
   echo " **" ."\n";
   echo " **" ."\n";

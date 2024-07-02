@@ -944,7 +944,28 @@ $cars = array("Volvo", "BMW", "Toyota");
 foreach ($cars as $x) {
   echo "$x <br>";
 }
-  echo " **" ."\n";
+  echo " *******Update Array Item*********" ."\n";
+  $cars = array("Volvo", "BMW", "Toyota");
+$cars[1] = "Ford";
+$cars = array("brand" => "Ford", "model" => "Mustang", "year" => 1964);
+$cars["year"] = 2024;
+var_dump($cars) ."\n";
+
+$cars = array("Volvo", "BMW", "Toyota");
+foreach($cars as &$x) {
+    $x = "Ford";
+}
+unset($x);
+var_dump($cars);
+
+$cars = array("Volvo", "BMW", "Toyota");
+foreach ($cars as &$x) {
+  $x = "Ford";
+}
+
+$x = "ice cream";
+unset($x);
+var_dump($cars);
   echo " **" ."\n";
   echo " **" ."\n";
   echo " **" ."\n";

@@ -854,7 +854,22 @@ echo addNumbers(1.2, 5.2);
   $cars = array("Volvo", "BMW", "Toyota");
   
   var_dump($cars);
-  echo count($cars);
+  echo count($cars)."\n";
+  echo $cars[0]."\n";
+  $cars[1] = "Ford"."\n";
+ var_dump($cars)."\n";
+ foreach ($cars as $x) {
+    echo "$x";
+  }
+
+  array_push($cars, "Nissan");
+var_dump($cars);
+
+$cars[5] = "Scania";
+$cars[7] = "Subaru";
+$cars[14] = "Fiat";
+array_push($cars, "Mercedez");
+var_dump($cars);
 
 // $myArr = array("Volvo", 15, ["apples", "bananas"], myFunction);
   echo " **" ."\n";

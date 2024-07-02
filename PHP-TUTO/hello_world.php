@@ -586,5 +586,173 @@ switch ($d) {
     echo "Weekends are the best!";
     break;
   default:
-    echo "Something went wrong";
+    echo "Something went wrong"."\n";
 }
+
+
+
+echo "++++++Loops++++++" ."\n";
+
+$i = 1;
+while ($i < 6) {
+  if ($i == 3) break;
+  echo $i;
+  $i++;
+}
+
+echo " **" ."\n";
+
+$i = 0;
+while ($i < 6) {
+  $i++;
+  if ($i == 3) continue;
+  echo $i;
+}
+echo " **" ."\n";
+
+$i = 1;
+while ($i < 6):
+  echo $i;
+  $i++;
+endwhile;
+
+echo " **" ."\n";
+$i = 0;
+while ($i < 100) {
+  $i+=10;
+  echo $i ;
+}
+
+echo " **" ."\n";
+
+$i = 1;
+
+do {
+  echo $i;
+  $i++;
+} while ($i < 6);
+
+echo " **" ."\n";
+
+$i = 8;
+
+do {
+  echo $i;
+  $i++;
+} while ($i < 6);
+
+echo " **" ."\n";
+
+$i = 1;
+
+do {
+  if ($i == 3) break;
+  echo $i;
+  $i++;
+} while ($i < 6);
+
+echo " **" ."\n";
+
+
+
+$i = 0;
+
+do {
+  $i++;
+  if ($i == 3) continue;
+  echo $i;
+} while ($i < 6);
+
+echo " **" ."\n";
+
+for ($x = 0; $x <= 10; $x++) {
+    echo "The number is: $x <br>";
+  }
+
+  echo " **" ."\n";
+
+  for ($x = 0; $x <= 10; $x++) {
+    if ($x == 3) break;
+    echo "The number is: $x <br>";
+  }
+  echo " **" ."\n";
+
+  for ($x = 0; $x <= 10; $x++) {
+    if ($x == 3) continue;
+    echo "The number is: $x <br>";
+  }
+  echo " **" ."\n";
+
+  for ($x = 0; $x <= 100; $x+=10) {
+    echo "The number is: $x <br>";
+  }
+  echo " **" ."\n";
+  $colors = array("red", "green", "blue", "yellow");
+
+foreach ($colors as $x) {
+  echo "$x <br>";
+}
+  echo " **" ."\n";
+
+  $members = array("Peter"=>"35", "Ben"=>"37", "Joe"=>"43");
+
+foreach ($members as $x => $y) {
+  echo "$x : $y <br>";
+}
+  echo " **" ."\n";
+
+  class CarIt {
+    public $color;
+    public $model;
+    public function __construct($color, $model) {
+        $this->color = $color;
+        $this->model = $model;
+    }
+}
+
+$myCarIt = new CarIt("red", "volvo");
+
+foreach($myCarIt as $x => $y) {
+    echo "$x: $y ";
+}
+  echo " **" ."\n";
+
+  $colors = array("red", "green", "blue", "yellow");
+
+foreach ($colors as $x) {
+  if ($x == "blue") break;
+  echo "$x <br>";
+}
+  echo " **" ."\n";
+  $colors = array("red", "green", "blue", "yellow");
+
+foreach ($colors as $x) {
+  if ($x == "blue") continue;
+  echo "$x <br>";
+}
+  echo " **" ."\n";
+  $colors = array("red", "green", "blue", "yellow");
+
+foreach ($colors as $x) {
+  if ($x == "blue") $x = "pink";
+  echo "$x <br>";
+}
+
+var_dump($colors);
+  echo " **" ."\n";
+  $colors = array("red", "green", "blue", "yellow");
+
+foreach ($colors as &$x) {
+  if ($x == "blue") $x = "pink";
+}
+
+var_dump($colors);
+  echo " **" ."\n";
+  $colors = array("red", "green", "blue", "yellow");
+
+foreach ($colors as $x) :
+  echo "$x <br>";
+endforeach;
+  echo " **" ."\n";
+  echo " **" ."\n";
+  echo " **" ."\n";

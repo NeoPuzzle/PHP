@@ -958,15 +958,26 @@ foreach($cars as &$x) {
 unset($x);
 var_dump($cars);
 
-$cars = array("Volvo", "BMW", "Toyota");
-foreach ($cars as &$x) {
-  $x = "Ford";
-}
+// $cars = array("Volvo", "BMW", "Toyota");
+// foreach ($cars as &$x) {
+//   $x = "Ford";
+// }
 
-$x = "ice cream";
-unset($x);
+// $x = "ice cream";
+// var_dump($cars);
+  echo " *******Add Array Items*********" ."\n";
+  $fruits = array("Apple", "Banana", "Cherry");
+$fruits[] = "Orange";
+var_dump($fruits);
+$cars = array("brand" => "Ford", "model" => "Mustang");
+$cars["color"] = "Red";
 var_dump($cars);
-  echo " **" ."\n";
+$fruits = array("Apple", "Banana", "Cherry");
+array_push($fruits, "Orange", "Kiwi", "Lemon");
+var_dump($fruits);
+$cars = array("brand" => "Ford", "model" => "Mustang");
+$cars += ["color" => "red", "year" => 1964];
+var_dump($cars);
   echo " **" ."\n";
   echo " **" ."\n";
   echo " **" ."\n";

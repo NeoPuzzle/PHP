@@ -1025,7 +1025,70 @@ for ($row = 0; $row < 4; $row++) {
     }
   echo "</ul>";
 }
-  echo " **" ."\n";
+  echo " **********Superglobals************" ."\n";
+
+  $x = 75;
+  
+function myfunction() {
+  // echo $x;
+  // global $x;
+  // echo $x;
+  echo $GLOBALS['x'];
+}
+
+myfunction();
+
+echo $_SERVER['PHP_SELF'];
+echo $_SERVER['SERVER_NAME'];
+echo $_SERVER['HTTP_HOST'];
+echo $_SERVER['HTTP_REFERER'];
+echo $_SERVER['HTTP_USER_AGENT'];
+echo $_SERVER['SCRIPT_NAME'];
+
+
+
+$_REQUEST['firstname'];
+
+$name = $_REQUEST['fname'];
+echo $name;
+
+/*<html>
+<body>
+
+<form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+  Name: <input type="text" name="fname">
+  <input type="submit">
+</form>
+
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  $name = htmlspecialchars($_REQUEST['fname']);
+  if (empty($name)) {
+    echo "Name is empty";
+  } else {
+    echo $name;
+  }
+}
+?>
+
+</body>
+</html>*/
+
+
+/*function myfunction() {
+  const xhttp = new XMLHttpRequest();
+  xhttp.open("POST", "demo_phpfile.php");
+  xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+  xhttp.onload = function() {
+    document.getElementById("demo").innerHTML = this.responseText;
+  }
+  xhttp.send("fname=Mary");
+  }
+}*/
+  echo " **************RegEx**************" ."\n";
+  $str = "Visit Microsoft!";
+  $pattern = "/microsoft/i";
+  echo preg_replace($pattern, "W3Schools", $str);
   echo " **" ."\n";
 
   ?>

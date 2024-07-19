@@ -12,6 +12,10 @@ echo "I have a $color $car" . "\n";
  ?>
 <p>Some text.</p>
 <p>Some more text.</p>
+<?php echo readfile("webdictionary.txt"); ?>
+<?php 
+$myfile = fopen("webdict.txt", "r");
+?>
 <?php include 'footer.php';?>
 <!-- <?php include 'noFileExists.php';?> -->
 <!-- <?php require 'noFileExists.php';?> -->

@@ -40,6 +40,32 @@ while(!feof($myfilese)) {
 }
 fclose($myfilese);
 ?>
+
+<?php
+$mynewfilee = fopen("newfilee.txt", "w") or die("Unable to open file!");
+$txt = "John Doe\n";
+fwrite($mynewfilee, $txt);
+$txt = "Jane Doe\n";
+fwrite($mynewfilee, $txt);
+fclose($mynewfilee);
+?>
+
+<?php
+$myfileneww = fopen("newwwfile.txt", "w") or die("Unable to open file!");
+$txt = "Mickey Mouse\n";
+fwrite($myfileneww, $txt);
+$txt = "Minnie Mouse\n";
+fwrite($myfileneww, $txt);
+fclose($myfileneww);
+?>
+<?php
+$myffile = fopen("newffile.txt", "a") or die("Unable to open file!");
+$txt = "Donald Duck\n";
+fwrite($myffile, $txt);
+$txt = "Goofy Goof\n";
+fwrite($myffile, $txt);
+fclose($myffile);
+?>
 <?php include 'footer.php';?>
 <!-- <?php include 'noFileExists.php';?> -->
 <!-- <?php require 'noFileExists.php';?> -->
